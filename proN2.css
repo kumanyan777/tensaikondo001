@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.header {
+  background: rgb(0, 0, 0);
+}
+
+.header h1 {
+  font-size: 50px;
+  color: white;
+  margin: 150px;
+  text-align: center;
+}
+
+
+
+.area {
+  width: 80%;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+ 
+.tab_class {
+  width: calc(92%/5);
+  height: 50px;
+  background-color: rgb(66, 66, 66);
+  line-height: 50px;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  float: left;
+  order: -1;
+  border-radius: 20px 20px 20px 20px;
+  margin-right: 2%;
+}
+
+.tab_class:last-of-type {
+  margin-right: 0;
+}
+ 
+input[name="tab_name"] {
+  display: none;
+}
+ 
+input:checked + .tab_class {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+ 
+.content_class {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+
+.image img {
+  width: 100%;
+  margin-top: 80px;
+  
+}
+ 
+input:checked + .tab_class + .content_class {
+  display: block;
+}
+
+.text {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+
+.text h1 {
+  font-size: 50px;
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.text p {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 80px;
+}
+
+
